@@ -1,0 +1,59 @@
+let num1, num2, num3, num4, somanum, medianum, qnum, numero1, numero2, somaimpares;
+
+num1 = Number(prompt("Insira o valor do primeiro número"));
+num2 = Number(prompt("Insira o valor do segundo número"));
+num3 = Number(prompt("Insira o valor do terceiro número"));
+num4 = Number(prompt("Insira o valor do quarto número"));
+
+if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
+  alert("Pelo menos um dos valores informados não é um número válido.");
+} else {
+  somanum = num1 + num2 + num3 + num4;
+}
+
+medianum = somanum / 4;
+alert("A média dos números é " + medianum);
+
+alert("Alteração do programa anterior, sem limite definido.");
+qnum = parseInt(prompt("Defina a quantidade de números desejado."));
+somanum = 0;
+medianum = 0;
+
+if (isNaN(qnum) || qnum <= 0) {
+  alert("Quantidade inválida. Por favor, insira um número maior que 0.");
+} else {
+  for (var q = 1; q <= qnum; q++) {
+    let num = parseFloat(prompt("Insira o valor do número " + q));
+    if (isNaN(num)) {
+      alert("Houve um erro, insira um número válido.");
+    } else {
+      somanum += num;
+    }
+  }
+
+  medianum = somanum / qnum;
+  alert("A média dos números é de " + medianum);
+}
+    
+alert("Agora um programa que soma os numeros impares entre dois numeros.")
+
+numero1 = parseInt(prompt("Registre o primeiro número."));
+numero2 = parseInt(prompt("Registre o segundo número (deve ser maior que o primeiro)."));
+somaimpares = 0;
+
+if (numero1 >= numero2 || isNaN(numero1) || isNaN(numero2)) {
+    alert("Houve um erro, por favor, registre dois números válidos, sendo o segundo maior que o primeiro.");
+} else {
+    for (var n = numero1; n <= numero2; n++) {
+        if (n % 2 !== 0) {
+            somaimpares += n;
+        }
+    }
+}
+alert("A soma de todos os números ímpares entre " + numero1 + " e " + numero2 + " é " + somaimpares);
+
+
+
+
+
+
